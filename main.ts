@@ -1,3 +1,15 @@
+basic.showIcon(IconNames.Silly)
+basic.pause(1000)
+basic.showIcon(IconNames.Rabbit)
+basic.pause(1000)
 basic.forever(function () {
-	
+    serial.writeLine("Temperature")
+    serial.writeLine("" + (input.temperature()))
+    serial.writeLine("")
+    serial.writeLine("Intensite lumineuse")
+    serial.writeLine("" + (input.lightLevel()))
+    serial.writeLine("")
+    serial.writeLine("Champ magnetique")
+    serial.writeLine("" + (input.magneticForce(Dimension.X)))
+    basic.pause(1000)
 })
